@@ -24,15 +24,15 @@ console.log(`Ciao, mi chiamo ${nome} ${cognome}.`);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const a1 = 10
-const b1 = 3
+let a = 10;
+let b = 3;
 console.log('--------Esercizio2--------');
-console.log (`${a1} + ${b1} = ${a1+b1}`);
-console.log (`${a1} - ${b1} = ${a1-b1}`);
-console.log (`${a1} * ${b1} = ${a1*b1}`);
-console.log (`${a1} / ${b1} = ${a1/b1}`);
-console.log (`${a1} % ${b1} = ${a1%b1}`);
-console.log (`${a1} ** ${b1} = ${a1**b1}`);
+console.log (`${a} + ${b} = ${a+b}`);
+console.log (`${a} - ${b} = ${a-b}`);
+console.log (`${a} * ${b} = ${a*b}`);
+console.log (`${a} / ${b} = ${a/b}`);
+console.log (`${a} % ${b} = ${a%b}`);
+console.log (`${a} ** ${b} = ${a**b}`);
 
 /* ESERCIZIO 3 — Età nel tempo
    const annoNascita (scegli un anno).
@@ -44,10 +44,11 @@ console.log (`${a1} ** ${b1} = ${a1**b1}`);
 /* SCRIVI QUI LA TUA RISPOSTA */
 const ANNO_NASCITA = 2001 ;
 const ANNO_CORRENTE = 2026 ;
+const myAge = ANNO_CORRENTE-ANNO_NASCITA;
 console.log('--------Esercizio3--------');
-console.log (`Oggi hai ${ANNO_CORRENTE - ANNO_NASCITA} anni.`);
-console.log (`Tra 10 anni avrai ${ANNO_CORRENTE + 10 - ANNO_NASCITA} anni.`);
-console.log (`5 anni fa avevi ${ANNO_CORRENTE - 5 - ANNO_NASCITA} anni.`);
+console.log (`Oggi hai ${myAge} anni.`);
+console.log (`Tra 10 anni avrai ${myAge + 10 } anni.`);
+console.log (`5 anni fa avevi ${myAge - 5 } anni.`);
 
 
 /* ESERCIZIO 4 — Maggiorenne?
@@ -57,10 +58,10 @@ console.log (`5 anni fa avevi ${ANNO_CORRENTE - 5 - ANNO_NASCITA} anni.`);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let minAge=18 ;
-let myAge=25 ;
+let eta=25 ;
+let maggiorenne = eta >=18;
 console.log('--------Esercizio4--------');
-console.log (`Età ${myAge} anni. Maggiorenne: ${myAge>=minAge}`);
+console.log (`Sei maggiorenne? ${maggiorenne}`);
 
 /* ESERCIZIO 5 — Tipo del valore
    Cinque variabili: una string, una number, una boolean, una null, una undefined.
@@ -138,17 +139,18 @@ console.log (`${n} è pari e divisibile per 3? ${n%2===0 && n%3===0}`) ;
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const a = 7;
-const b = 6;
-const c = 5;
+let latoA = 7;
+let latoB = 7;
+let latoC = 7;
+const perimeter= latoA+latoB+latoC
 console.log('--------Esercizio9--------') ;
-if (a===b && b===c) {
-   console.log(`Il triangolo è equilatero: perimetro ${a+b+c}`)
+if (latoA===latoB && latoB===latoC) {
+   console.log(`Il triangolo è equilatero: perimetro ${perimeter}`)
 } 
-else if(a===b && b!==c) {
-   console.log(`Il triangolo è isoscele: perimetro ${a+b+c}`)
+else if(latoA===latoB || latoB===latoC || latoA===latoC) {
+   console.log(`Il triangolo è isoscele. perimetro ${perimeter}`)
 }
 else {
-   console.log(`Il triangolo è scaleno: perimetro ${a+b+c}`)
+   console.log(`Il triangolo è scaleno: perimetro ${perimeter}`)
 };
 
